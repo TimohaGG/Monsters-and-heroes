@@ -3,6 +3,7 @@
 
 MyClass::MyClass(int size)
 {
+	
 	this->size = size;
 	this->arr = new int[size];
 	for (size_t i = 0; i < size; i++)
@@ -75,23 +76,15 @@ MyClass FillArr(MyClass* arr1, MyClass& arr2) {
 
 MyClass MyClass::operator+( MyClass& other)
 {
-	
-	if (this->size == other.size) {
-		MyClass tmp(FillArr(this, other));
-		return tmp;
-	}
-	
-	else if (this->size < other.size) {
-		MyClass tmp(FillArr(this, other));
+	if (this->size > other.size) {
+		MyClass tmp(FillArr(&other, *this));
 		return tmp;
 	}
 	else {
-		MyClass tmp(FillArr(&other, *this));
-		
+		MyClass tmp(FillArr(this, other));
 		return tmp;
 	}
 	
-	return*this;
 }
 
 bool MyClass::operator==(const MyClass& other)

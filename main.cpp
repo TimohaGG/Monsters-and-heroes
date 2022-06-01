@@ -3,14 +3,11 @@
 int main() {
 	RUS;
 	TIME;
-	int size = 3;
-	int size2 = 3;
+	int size = 2;
+	int size2 = 6;
 	MyClass a(size);
-	cout << "A: ";
-	a.PrintArr();
 	MyClass b(size2);
-	cout << "B: ";
-	b.PrintArr();
+	
 	MyClass c= a + b;
 	cout << "A: ";
 	a.PrintArr();
