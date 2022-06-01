@@ -62,14 +62,36 @@ MyClass& MyClass::operator=(const MyClass& other)
 	return*this;
 }
 
-MyClass FillArr(MyClass* arr1, MyClass& arr2) {
+MyClass FillArr(MyClass* arr1, MyClass& arr2, char oper) {
 	MyClass tmp(arr2.GetSize());
 	for (size_t i = 0; i < arr2.GetSize(); i++)
 	{
-		if (i < arr1->GetSize())
-			tmp.arr[i] = arr1->arr[i] + arr2.arr[i];
-		else
+		if (i < arr1->GetSize()) {
+			switch (oper)
+			{
+			case '+': {
+				tmp.arr[i] = arr1->arr[i] + arr2.arr[i];
+			}break;
+			case '-':{
+				tmp.arr[i] = arr1->arr[i] - arr2.arr[i];
+				}break;
+			case '*': {
+				tmp.arr[i] = arr1->arr[i] * arr2.arr[i];
+			}break;
+			case '/': {
+				if (arr2.arr[i] != 0)
+					tmp.arr[i] = arr1->arr[i] / arr2.arr[i];
+				else
+					tmp.arr[i] = 0;
+			}break;
+			}
+			
+		}
+			
+		else {
 			tmp.arr[i] = arr2.arr[i];
+		}
+			
 	}
 	return tmp;
 }
@@ -77,14 +99,52 @@ MyClass FillArr(MyClass* arr1, MyClass& arr2) {
 MyClass MyClass::operator+( MyClass& other)
 {
 	if (this->size > other.size) {
-		MyClass tmp(FillArr(&other, *this));
+		MyClass tmp(FillArr(&other, *this,'+'));
 		return tmp;
 	}
 	else {
-		MyClass tmp(FillArr(this, other));
+		MyClass tmp(FillArr(this, other,'+'));
 		return tmp;
 	}
 	
+}
+MyClass MyClass::operator-(MyClass& other)
+{
+	if (this->size > other.size) {
+		MyClass tmp(FillArr(&other, *this,'-'));
+		return tmp;
+	}
+	else {
+		MyClass tmp(FillArr(this, other,'-'));
+		return tmp;
+	}
+
+}
+
+MyClass MyClass::operator*(MyClass& other)
+{
+	if (this->size > other.size) {
+		MyClass tmp(FillArr(&other, *this, '*'));
+		return tmp;
+	}
+	else {
+		MyClass tmp(FillArr(this, other, '*'));
+		return tmp;
+	}
+
+}
+
+MyClass MyClass::operator/(MyClass& other)
+{
+	if (this->size > other.size) {
+		MyClass tmp(FillArr(&other, *this, '/'));
+		return tmp;
+	}
+	else {
+		MyClass tmp(FillArr(this, other, '/'));
+		return tmp;
+	}
+
 }
 
 bool MyClass::operator==(const MyClass& other)

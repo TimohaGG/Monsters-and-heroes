@@ -8,7 +8,7 @@ int main() {
 	MyClass a(size);
 	MyClass b(size2);
 	
-	MyClass c= a + b;
+	MyClass c= a / b;
 	cout << "A: ";
 	a.PrintArr();
 	cout << "B: ";
