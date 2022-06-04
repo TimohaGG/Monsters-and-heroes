@@ -10,11 +10,17 @@
     <Filter Include="Lib">
       <UniqueIdentifier>{581e1b68-8241-47cf-bcff-0badb8b26281}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes\Point">
+      <UniqueIdentifier>{455d6e17-670a-4ae6-918a-95ad51ee9dba}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Classes\MyClass\MyClass.cpp">
       <Filter>Classes\MyClass</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Point\Point.cpp">
+      <Filter>Classes\Point</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -23,6 +29,9 @@
     </ClInclude>
     <ClInclude Include="Lib\Lib.h">
       <Filter>Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Point\Point.h">
+      <Filter>Classes\Point</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
