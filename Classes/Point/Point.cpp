@@ -6,7 +6,7 @@ Point::Point()
 	y = 0;
 }
 
-inline Point::Point(int x, int y)
+Point::Point(int x, int y)
 {
 	this->x = x;
 	this->y = y;
@@ -14,7 +14,7 @@ inline Point::Point(int x, int y)
 
 void Point::Print()
 {
-	cout << "X: " << x << endl << "Y: " << y << endl;
+	cout << "X: " << x << endl << "Y: " << y << endl << endl;
 }
 
 Point& Point::operator=(const Point& other)
@@ -24,8 +24,33 @@ Point& Point::operator=(const Point& other)
 	return*this;
 }
 
+Point Point::operator+(const Point& other)
+{
+	Point tmp;
+	tmp.x = this->x + other.x;
+	tmp.y = this->y + other.y;
+	return tmp;
+}
+
+Point Point::operator+=(const Point& other)
+{
+	this->x += other.x;
+	this->y += other.y;
+	return *this;
+}
+
 Point::Point(const Point& other)
 {
 	this->x = other.x;
 	this->y = other.y;
+}
+
+bool Point::operator==(const Point& other)
+{
+	return this->x == other.x && this->y == other.y;
+}
+
+bool Point::operator!=(const Point& other)
+{
+	return !(this->x == other.x && this->y == other.y);
 }
