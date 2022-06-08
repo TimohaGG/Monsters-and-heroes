@@ -1,6 +1,6 @@
 ﻿#include"Lib/Lib.h"
 #include"Classes/MyClass/MyClass.h"
-//#include"Classes/Point/Point.h"
+
 int main() {
 	RUS;
 	TIME;
@@ -18,13 +18,4 @@ int main() {
 	b.PrintArr();
 	cout << "C: ";
 	c.PrintArr();
-
-	////------------Point------------
-	//Point a(2,4);
-	//a.Print();
-	//Point b(5,3);
-	//b.Print();
-
-	//if (a != b) cout << "Yes!!" << endl;
-	//else cout << "No" << endl;
 }
