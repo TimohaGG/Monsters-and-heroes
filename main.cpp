@@ -4,4 +4,7 @@
 int main() {
 	RUS;
 	TIME;
+	Book book("It", "Stephen King", 1230);
+	Human human;
+	human.TakeBook(book);
 }

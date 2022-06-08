@@ -1,9 +1,17 @@
 #include"Class.h"
+#include"../../Lib/Lib.h"
 
-Class::Class()
+void Human::TakeBook(Book& book)
 {
+	cout << "----------" << book.name << "----------\n";
+	cout << "By " << book.author << endl;
+	cout << "Code: " << book.number <<endl;
+	
 }
 
-Class::~Class()
+Book::Book(string name, string author, int number)
 {
+	this->name = name;
+	this->author = author;
+	this->number = number;
 }
