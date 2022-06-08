@@ -23,5 +23,6 @@
     <ClCompile Include="Classes\Class\Class.cpp">
       <Filter>Classes\Class</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
 </Project>
