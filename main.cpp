@@ -1,12 +1,12 @@
 ﻿#include"Lib/Lib.h"
-//#include"Classes/MyClass/MyClass.h"
-#include"Classes/Point/Point.h"
+#include"Classes/MyClass/MyClass.h"
+//#include"Classes/Point/Point.h"
 int main() {
 	RUS;
 	TIME;
 
 	//------------MyClass------------
-	/*int size = 2;
+	int size = 2;
 	int size2 = 6;
 	MyClass a(size);
 	MyClass b(size2);
@@ -17,14 +17,14 @@ int main() {
 	cout << "B: ";
 	b.PrintArr();
 	cout << "C: ";
-	c.PrintArr();*/
+	c.PrintArr();
 
-	//------------Point------------
-	Point a(2,4);
-	a.Print();
-	Point b(5,3);
-	b.Print();
+	////------------Point------------
+	//Point a(2,4);
+	//a.Print();
+	//Point b(5,3);
+	//b.Print();
 
-	if (a != b) cout << "Yes!!" << endl;
-	else cout << "No" << endl;
+	//if (a != b) cout << "Yes!!" << endl;
+	//else cout << "No" << endl;
 }
