@@ -4,9 +4,6 @@
     <Filter Include="Classes">
       <UniqueIdentifier>{0af9f630-bd34-4351-9213-99aa3b0806bb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\Class">
-      <UniqueIdentifier>{94a6ee55-aaf0-4929-bf2e-a298bef634ce}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Lib">
       <UniqueIdentifier>{dfc2a2e9-a160-4aac-a49f-f0e6c20cb6a3}</UniqueIdentifier>
     </Filter>
@@ -15,14 +12,8 @@
     <ClInclude Include="Lib\Lib.h">
       <Filter>Lib</Filter>
     </ClInclude>
-    <ClInclude Include="Classes\Class\Class.h">
-      <Filter>Classes\Class</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Classes\Class\Class.cpp">
-      <Filter>Classes\Class</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp" />
   </ItemGroup>
 </Project>
