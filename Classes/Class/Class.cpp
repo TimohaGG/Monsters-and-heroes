@@ -1,9 +1,14 @@
 #include"Class.h"
 
-Class::Class()
+
+Pixel::Pixel()
 {
+	r = g = b = 0;
 }
 
-Class::~Class()
+Pixel::Pixel(int r, int g, int b)
 {
+	this->r = r;
+	this->b = b;
+	this->g = g;
 }
