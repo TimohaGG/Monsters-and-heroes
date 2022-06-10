@@ -4,4 +4,6 @@
 int main() {
 	RUS;
 	TIME;
+	Student student;
+	
 }

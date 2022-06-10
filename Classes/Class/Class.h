@@ -1,11 +1,23 @@
 #pragma once
-class Class
+class Human
 {
 public:
-	Class();
-	~Class();
-
+	string GetName() { return name; }
 private:
+	string name;
+};
 
+class Student : private Human
+{
+public:
+	string group;
+	
+};
+
+
+class Professor : public Human
+{
+public:
+	string subject;
 };
 
