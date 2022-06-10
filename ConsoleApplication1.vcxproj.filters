@@ -12,8 +12,14 @@
     <ClInclude Include="Lib\Lib.h">
       <Filter>Lib</Filter>
     </ClInclude>
+    <ClInclude Include="Classes\Class.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Classes\Class.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

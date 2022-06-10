@@ -1,34 +1,5 @@
 #include"Lib/Lib.h"
-
-
-class Apple
-{
-public:
-	Apple(int weight, string color);
-	void PrintApple();
-	int GetId() { return id; }
-	static int count;
-private:
-	int weight;
-	int id;
-	string color;
-};
-
-int Apple::count = 0;
-
-Apple::Apple(int weight, string color)
-{
-	this->color = color;
-	this->weight = weight;
-	count++;
-	id = count;
-}
-
-void Apple::PrintApple()
-{
-	cout << "ID:" << id << endl << "Weigth: " << weight << endl << "Color: " << color << endl<<endl;
-}
-
+#include"Classes/Class.h"
 
 
 int main() {

@@ -19,9 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Classes\Class.h" />
     <ClInclude Include="Lib\Lib.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Classes\Class.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
