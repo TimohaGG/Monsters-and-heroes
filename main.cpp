@@ -4,4 +4,9 @@
 int main() {
 	RUS;
 	TIME;
+	
+	
+	int PixelAmount = 2;
+	Image img(PixelAmount);
+	img.PrintImage();
 }
