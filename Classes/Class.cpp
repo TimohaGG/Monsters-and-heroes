@@ -13,3 +13,8 @@ void Apple::PrintApple()
 {
 	cout << "ID:" << id << endl << "Weigth: " << weight << endl << "Color: " << color << endl << endl;
 }
+
+void Apple::ChangeColor(Apple& apple, string color)
+{
+	apple.color = color;
+}
