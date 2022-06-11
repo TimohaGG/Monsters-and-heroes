@@ -47,6 +47,11 @@ Professor::Professor()
 	subject = "none";
 }
 
+Professor::~Professor()
+{
+	delete[] groups;
+}
+
 void Professor::SetSubject(string subject)
 {
 	this->subject = subject;
@@ -57,10 +62,30 @@ void Professor::PrintSubject()
 	cout << "Subject: " << subject << endl;
 }
 
+void Professor::PrintGroups()
+{
+	cout << "Groups: " << endl;
+	for (size_t i = 0; i < GroupsAmount; i++)
+	{
+		cout << "\t" << groups[i] << endl;
+	}
+}
+
 void Professor::PrintProfessor()
 {
 	PrintName();
 	PrintSubject();
+	PrintGroups();
+}
+
+void Professor::SetGroups(int GroupsAmount)
+{
+	groups = new string[GroupsAmount];
+	this->GroupsAmount = GroupsAmount;
+	for (size_t i = 0; i < GroupsAmount; i++)
+	{
+		getline(cin, groups[i]);
+	}
 }
 
 string Professor::GetSubject()

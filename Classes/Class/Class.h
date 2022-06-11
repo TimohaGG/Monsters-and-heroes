@@ -30,16 +30,22 @@ class Professor : public Human
 {
 public:
 	Professor();
+	~Professor();
 	Professor(string name, string subject) : Human(name) {
 		SetSubject(subject);
+		
 	}
 	void SetSubject(string subject);
 	void PrintSubject();
+	void PrintGroups();
 	void PrintProfessor();
+	void SetGroups(int GroupsAmount);
 	string GetSubject();
 
 private:
 	string subject;
+	string* groups;
+	int GroupsAmount;
 };
 
 Professor* FillProfessors(Professor*& arr, int size);

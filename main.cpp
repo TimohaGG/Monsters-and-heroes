@@ -7,11 +7,9 @@ int main() {
 	TIME;
 	
 	 int size = 3;
-	Professor* arr= new Professor[size];
-	FillProfessors(arr,size);
-	for (size_t i = 0; i < size; i++)
-	{
-		arr[i].PrintProfessor();
-	}
-	delete[] arr;
+	 Professor pro;
+	 pro.SetName("Alex");
+	 pro.SetSubject("Math");
+	 pro.SetGroups(2);
+	 pro.PrintProfessor();
 }
