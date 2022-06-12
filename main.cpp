@@ -4,7 +4,7 @@
 int main() {
 	RUS;
 	TIME;
-	Gun gun;
+	/*Gun gun;
 	Machinegun machinegun;
 	Bazooka bazooka;
 	Bomb bomb;
@@ -12,5 +12,11 @@ int main() {
 	player.Shoot(&gun);
 	player.Shoot(&machinegun);
 	player.Shoot(&bazooka);
-	player.Shoot(&bomb);
+	player.Shoot(&bomb);*/
+	Player a;
+	Player b("Vitalit");
+	Player c("Vasya", 20);
+	a.Print();
+	b.Print();
+	c.Print();
 }

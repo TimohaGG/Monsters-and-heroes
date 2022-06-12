@@ -31,3 +31,28 @@ void Player::Shoot(Weaphon* weaphon)
 {
 	weaphon->Shoot();
 }
+
+void Player::Print()
+{
+	cout <<"#" << id << " Name: " << name << endl << "Age: " << age << endl;
+}
+
+Player::Player()
+{
+	amount++;
+	id = amount;
+	name = "unknown";
+	age = 0;
+}
+
+Player::Player(string name): Player()		//Дилегируещие конструкторы
+{
+	this->name = name;
+}
+
+Player::Player(string name, int age): Player(name)	//Дилегируещие конструкторы
+{
+	this->age = age;
+}
+
+int Player::amount = 0;

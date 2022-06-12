@@ -1,5 +1,6 @@
 #pragma once
-class Weaphon {
+#include"../../Lib/Lib.h"
+class Weaphon {					//Чисто виртуальный класс 
 public:
 	virtual void Shoot() = 0;
 };
@@ -28,4 +29,15 @@ public:
 class Player  {
 public:
 	void Shoot(Weaphon* weaphon);
+	void Print();
+	Player();
+	Player(string name);
+	Player(string name, int age);
+	
+
+private:
+	static int amount;
+	string name;
+	int age;
+	int id;
 };
