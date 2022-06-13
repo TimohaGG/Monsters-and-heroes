@@ -8,5 +8,5 @@ int main() {
 	BrMsg brMsg("Hello");
 
 	Printer pr;
-	pr.Print(&BrMsg);
+	pr.Print(&brMsg);
 }

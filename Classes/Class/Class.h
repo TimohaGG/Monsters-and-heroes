@@ -15,7 +15,6 @@ private:
 class BrMsg : public Msg{
 public:
 	BrMsg(string msg) : Msg(msg) {
-
 	}
 	string GetMsg() override
 	{
