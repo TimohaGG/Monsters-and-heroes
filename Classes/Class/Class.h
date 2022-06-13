@@ -1,43 +1,31 @@
 #pragma once
 #include"../../Lib/Lib.h"
-class Weaphon {					//Абстрактный класс 
+class Msg {
 public:
-	virtual void Shoot() = 0;
-};
-
-class Gun : public Weaphon
-{
-public:
-	 void Shoot() override;
-};
-
-class Machinegun : public Gun {
-public:
-	void Shoot() override;
-};
-
-class Bazooka : public Weaphon {
-public:
-	void Shoot() override;
-};
-
-class Bomb : public Weaphon {
-public:
-	void Shoot() override;
-};
-
-class Player  {
-public:
-	void Shoot(Weaphon* weaphon);
-	void Print();
-	Player();
-	Player(string name);
-	Player(string name, int age);
-	
-
+	Msg(string msg) {
+		this->msg = msg;
+	}
+	virtual string GetMsg() {
+		return msg;
+	}
 private:
-	static int amount;
-	string name;
-	int age;
-	int id;
+	string msg;
+};
+
+class BrMsg : public Msg{
+public:
+	BrMsg(string msg) : Msg(msg) {
+
+	}
+	string GetMsg() override
+	{
+		return "[" + ::Msg::GetMsg() + "]";
+	}
+};
+
+class Printer{
+public:
+	void Print(Msg* msg) {
+		cout << msg->GetMsg() << endl;
+	}
 };

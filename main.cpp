@@ -4,4 +4,9 @@
 int main() {
 	RUS;
 	TIME;
+	Msg msg("Hello");
+	BrMsg brMsg("Hello");
+
+	Printer pr;
+	pr.Print(&BrMsg);
 }
